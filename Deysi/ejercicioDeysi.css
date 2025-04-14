@@ -1,7 +1,66 @@
+.head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: #222;
+    color: white;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .menu-list {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .link-box {
+    display: inline-block;
+    padding: 15px 25px;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    animation: float 3s ease-in-out infinite;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Colores únicos para cada uno */
+  .youtube {
+    background-color: #FF0000;
+  }
+  
+  .codedex {
+    background-color: #6C63FF;
+  }
+  
+  .instagram {
+    background-color: #E1306C;
+  }
+  
+  .github {
+    background-color: #333;
+  }
+  
+  /* Animación de movimiento */
+  @keyframes float {
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 /*Colores de la Raiz*/
 :root{
