@@ -27,32 +27,27 @@
     text-decoration: none;
     border-radius: 10px;
     font-weight: bold;
-    animation: float 3s ease-in-out infinite;
-    transition: transform 0.3s ease;
+    position: relative;
+    transition: transform 0.2s ease;
   }
   
-  /* Colores únicos para cada uno */
+
   .youtube {
     background-color: #FF0000;
   }
-  
   .codedex {
     background-color: #6C63FF;
   }
-  
   .instagram {
     background-color: #E1306C;
   }
-  
   .github {
     background-color: #333;
   }
   
-  /* Animación de movimiento */
-  @keyframes float {
-    0%   { transform: translateY(0px); }
-    50%  { transform: translateY(-10px); }
-    100% { transform: translateY(0px); }
+
+  .link-box:active {
+    transform: translateY(-10px) scale(1.05);
   }
 
 
