@@ -1,24 +1,90 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+section {
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.5s ease, background-color 0.3s ease;
+  opacity: 0;
+  animation: fadeIn 6s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+section:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+
+.exercisie1 {
+  background-color: #ffebee;
+}
+.exercisie2 {
+  background-color: #e3f2fd;
+}
+.exercisie3 {
+  background-color: #e8f5e9;
+}
+.exercisie4 {
+  background-color: #fff3e0;
+}
+.exercisie5 {
+  background-color: #f3e5f5;
+}
+.coming-soon {
+  background-color: #ede7f6;
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    color: var(--color-texto);
 }
-/*Colores de la Raiz*/
+
 :root{
-    --color-body:#DDD;
-    --color-texto:#1c1c1c;
-    --color-head:#FFF;
-    --btn-example:#fff;
+    --color-body:#e38bfe;
+    --color-texto:#161414;
+    --color-head:#6fdc4a;
+    --btn-example:#c2dcee;
     --btn-exHover:#e41212;
+    --bck-container:#f7a7f7;
+    --bck-btnEnlace:#d1e6ee7c;
+
+
+    --instagram-purple: #8a3ab9; 
+    --instagram-blue: #4c68d7;   
+    --instagram-pink: #c13584;   
+    --instagram-orange: #fbad50; 
+    --instagram-light-yellow: #FFDC80; 
+    --instagram-dark-orange: #F56040; 
+    --instagram-red: #FD1D1D;   
+    --instagram-purple-red: #E1306C; 
+    --instagram-royal-blue: #405DE6; 
+    --instagram-purple-red: #D43089;
+    --instagram-orange: #F77737;  
+    --instagram-yellow: #FCAF45;  
 }
-/*__________________________-*/
+
 body{
     background: var(--color-body);
     display: grid;
     grid-template-rows: 100px auto;
     grid-template-columns: 1fr;
 }
-/*Contenido del header*/
+
+a{
+    text-decoration: none;
+}
+
 .head{
     background: var(--color-head);
     grid-row: 1/2;
@@ -38,10 +104,10 @@ body{
     justify-content: center;
 }
 
-.head .title .bxs-ghost{
-    font-size: 30px;
+.head .title .bxl-graphql{
+    font-size: 40px;
 }
-/*Contenido del main*/
+
 .main{
     grid-row: 2/3;
     display: grid;
@@ -49,12 +115,12 @@ body{
     minmax(220px,1fr));
     gap: 1rem;
     justify-content: space-around;
+    padding: 15px;
 }
 .main section{
     min-width: 200px; 
     min-height: 300px;
     padding: 10px;
-    border: solid #000;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -62,7 +128,7 @@ body{
     gap: 2rem;
     position: relative;
 }
-/*Boton Ejemplo*/
+
 .btn-example{
     background: var(--btn-example);
     border: none;
@@ -80,3 +146,64 @@ body{
     background: var(--btn-exHover);
     color: #fff;
 }
+
+main section{
+    background: var(--bck-container);
+    border-radius: 10px;
+    transition: .3s ease-in-out;
+    filter: drop-shadow(0 0 1px #000);
+}
+main section:hover{
+    transform: rotate(-1deg) ;
+    scale: 1.05;
+    filter: drop-shadow(0 0 10px #000);
+
+}
+/*Botones de enlace*/
+.item-list{
+    background:var(--bck-btnEnlace);
+    padding:10px 20px;
+    border-radius: 10px;
+    transition:all .4s ease;
+    display: flex; 
+    align-items: center;
+}
+.item-list:nth-child(1):hover{
+    --bck-btnEnlace:#eb2c2c;
+}
+.item-list:nth-child(1):hover .textEnl{
+    color: #fff;
+}
+.item-list i{
+    opacity: 0;
+}
+.item-list:nth-child(1):hover .bxl-youtube{
+    color: #fff;
+    opacity: 1;
+}   
+.item-list:nth-child(2):hover{
+    background: linear-gradient(45deg, var(--instagram-purple), var(--instagram-pink), var(--instagram-orange));
+}
+.item-list:nth-child(2):hover .textEnl{
+    color: #fff;
+
+}
+.item-list:nth-child(2):hover i{
+    color: #fff;
+    opacity: 1;
+}
+.item-list:nth-child(3):hover{
+    --bck-btnEnlace:#2ceb9b;
+
+}
+.item-list:nth-child(4):hover{
+    --bck-btnEnlace:#0a1d15;
+
+}
+.item-list:nth-child(4):hover .textEnl{
+    color: #fff;
+}
+.item-list:nth-child(4):hover i{
+    opacity: 1;
+}
+
